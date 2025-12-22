@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% set title = user.display_name if user.display_name else user.username %}
+
+{% block main %}
+    <div class="title">
+    	Создаётся чат.
+    </div>
+    <div class="subtitle">Не закрывайте данную страницу. Вы будете переадресованы автоматически.</div>
+    <input type="hidden" id="userId" value="{{ user.id }}">
+    <script type="module" src="/static/js/crypto_start_chat.js"></script>
+{% endblock %}

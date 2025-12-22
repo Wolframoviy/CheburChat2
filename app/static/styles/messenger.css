@@ -1,0 +1,116 @@
+body {
+    overflow: hidden;
+    background: #002855;
+}
+
+.sect {
+    border: 1px solid #0F171E;
+}
+
+.chats {
+    background: #0F171E;
+    background: linear-gradient(141deg, rgba(15, 23, 30, 1) 0%, rgba(20, 28, 43, 1) 100%);
+}
+
+.chat-container {
+    background: #0F171E;
+    background: radial-gradient(circle, rgba(15, 23, 30, 1) 0%, rgba(20, 28, 43, 1) 100%);
+    height: 7%;
+    width: 100%;
+    padding: 5%;
+    color: white;
+}
+
+.messages-box-wrap {
+    height: 90%;
+    max-height: 90vh;
+    overflow: auto;
+    background: #0F171E;
+    background: radial-gradient(circle, rgba(15, 23, 30, 1) 0%, rgba(20, 28, 43, 1) 100%);
+}
+
+
+
+.message {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    margin: 2%;
+    min-width: 5%;
+    max-width: 60%;
+}
+
+.message-bubble {
+    border-radius: 10px 25px 15px 15px;
+    background: #3581E3;
+    padding: 10px 20px 10px 20px;
+    margin-left: 3%;
+    width: fit-content;
+}
+
+.message-username {
+    font-weight: bold;
+    color: white
+}
+
+.message-avatar {
+    height: 40px;
+    border-radius: 100%;
+}
+
+.message-text {
+    max-width: 100%;
+    color: white;
+}
+
+.message-system {
+    margin: auto;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    color: white;
+    font-style: italic;
+}
+
+.input-field-box {
+    background: #043447;
+    background: radial-gradient(circle, rgba(4, 52, 71, 1) 0%, rgba(20, 28, 43, 1) 100%);
+    display: flex;
+    height: 10%;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.input-field {
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background: #043447;
+    color: white;
+}
+
+.send-button {
+    margin-left: 3%;
+    width: 60px;
+    height: 60px;
+    max-width: 40%;
+    max-height: 50%;
+    border-radius: 100vh;
+    border: none;
+    background: #043447;
+    color: white;
+}
+
+@media (max-width: 768px) {
+  .messages-box-wrap {
+    height: 75%;
+  }
+  .input-field-box {
+    padding-bottom: 25%;
+    height: 25%;
+  }
+}

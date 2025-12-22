@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% set title = "Шифрование" %}
+
+{% block main %}
+	<div class="title">Шифрование хранилища</div>
+    <div class="subtitle">Ваш браузер создаст вам ассиметричный ключ, который будет зашифрован вашей кодовой фразой. Данную фразу необходимо будет вводить в каждой новой сессии. Рекомендуется использовать несколько слов не связанных между собой.</div>
+    <form class="login-form">
+        <div class="login-input-div">
+            <label for="seedPhrase">Придумайте кодовую фразу:
+                <input id="seedPhrase" type="text" placeholder="Легкая для запоминания сид-фраза без ключевых моментов." name="phrase">
+            </label>
+            <button type="button" id="seedSubmit">Продолжить</button>
+        </div>
+    </form>
+    <script type="module" src="/static/js/crypto.js"></script>
+{% endblock %}

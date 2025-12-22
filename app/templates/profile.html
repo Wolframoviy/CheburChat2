@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% set title = user.display_name if user.display_name else user.username %}
+
+{% block main %}
+	name: {{ title }}
+    registered: {{ user.registered_on }}
+    <form action="/start/" method="get">
+        <button name="with" value="{{ user.id }}">Начать общение</button>
+    </form>
+{% endblock %}

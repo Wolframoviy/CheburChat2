@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% set title = "Вход" %}
+
+{% block main %}
+    <div class="login-title">
+        Вход
+    </div>
+    <form action="/login/" method="post" class="login-form">
+        <div class="login-input-div">
+            <label for="usernameInput">Имя пользователя
+                <input type="text" class="login-input" id="usernameInput" name="username" placeholder="ВаняКрипер2005" required>
+            </label>
+        </div>
+        <div class="login-input-div">
+            <label for="passwordInput">Пароль
+                <input type="password" class="login-input" id="passwordInput" name="password" placeholder="************" required>
+            </label>
+        </div>
+        <button class="login-button" type="submit">Вход</button>
+    </form>
+{% endblock %}

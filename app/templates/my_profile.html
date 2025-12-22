@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+
+{% set title = user.display_name if user.display_name else user.username %}
+
+{% block main %}
+	name: {{ title }}
+    registered: {{ user.registered_on }}
+{% endblock %}

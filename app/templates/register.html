@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% set title = "Регистрация" %}
+
+{% block main %}
+    <div class="login-title">
+        Регистрация
+    </div>
+    <form action="/register/" method="post" class="login-form">
+        <div class="login-input-div">
+            <label for="usernameInput">Имя пользователя
+                <input type="text" class="login-input" id="usernameInput" name="username" placeholder="ВаняКрипер2005" required>
+            </label>
+        </div>
+        <div class="login-input-div">
+            <label for="passwordInput">Пароль
+                <input type="password" class="login-input" id="passwordInput" name="password" placeholder="м0йСл0жный!П@р0ль" required>
+            </label>
+        </div>
+        <div class="login-input-div">
+            <label for="passwordReInput">Повтор пароля
+                <input type="password" class="login-input" id="passwordReInput" name="repassword" placeholder="м0йСл0жный!П@р0ль" required>
+            </label>
+        </div>
+        <button class="login-button" type="submit">Регистрация</button>
+    </form>
+{% endblock %}
