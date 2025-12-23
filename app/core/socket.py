@@ -26,8 +26,6 @@ def connect(data):
 
     join_room(chat.id)
 
-    print(f"{session.get('user_id')} connected to {data.get('chat_id')}")
-
 @sio.on("disconnect")
 def disconnect():
     user = User.get_or_none(id=session.get("user_id"))

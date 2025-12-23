@@ -1,6 +1,6 @@
 from flask import render_template, redirect, request, url_for, session, flash, abort, Response
 from time import time
-from peewee import fn, JOIN
+from datetime import datetime
 
 from app import app
 from app.database.ChatModel import Chat
@@ -8,7 +8,6 @@ from app.database.UserModel import User
 from app.database.MessageModel import Message
 from app.helpers.crypto import generate_salt, get_hash, check_hash
 from app.helpers.decorators import *
-
 
 @app.route('/', methods=['GET'])
 def index():
@@ -115,12 +114,16 @@ def logout():
 @login_required
 def me():
     user = User.get(id=session.get("user_id"))
-    return render_template("my_profile.html", user=user)
+    return render_template("my_profile.html", user=user, datetime=datetime)
 
 @app.route("/user/<string:username>")
 def user(username):
     user = User.get(username=username)
-    return render_template("profile.html", user=user)
+    return render_template("profile.html", user=user, datetime=datetime)
+
+@app.route("/user/")
+def users():
+    return render_template("userslist.html", users=User.select())
 
 @app.route("/chats/<int:chat_id>/")
 @key_required

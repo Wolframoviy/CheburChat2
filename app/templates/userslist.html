@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% set title = "Список пользователей" %}
+
+{% block main %}
+	{% for user in users %}
+        <div><a href="/user/{{ user.username }}">{{ user.username }}</a></div>
+    {% endfor %}
+{% endblock %}
